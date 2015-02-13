@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Class assignment 1 &mdash; Demo</title>
+<link rel="stylesheet" href="css/demo.css" />
+<link href="jquery-ui.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+<script src="bootstrap-tokenfield.js"></script>
+
+ <script type="text/javascript">
+      $(document).ready(function() {
+        $('textarea.email').tokenField({badToken:null});
+      });
+    </script>
+
+<script>
+  $(function() {
+    $( "#slider-range-min" ).slider({
+      range: "min",
+      value: 5,
+      min: 0,
+      max: 20,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "" + $( "#slider-range-min" ).slider( "value" ) );
+  });
+
+
+$('.tokenfield').tokenfield();
+$('#tokenfield').tokenfield({
+  autocomplete: {
+    source: ['red','blue','green','yellow','violet','brown','purple','black','white'],
+    delay: 100
+  },
+  showAutocompleteOnFocus: true
+})
+
+
+  </script>
+</head>
+<body>
+
+
+  <div class="bigone header1">
+
+    <div class="halfone">
+      <h1>LearnMixer</h1>
+    </div>
+    <div class="halfone">
+      <p>
+        <input type="text" value="Search" />
+        <input type="submit" value="Search" />
+        <img src="http://google.github.io/material-design-icons/social/svg/ic_notifications_24px.svg" />
+        <a href="#">Help</a>
+        <a href="#">Log out</a>
+      </p>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="bigone header2">
+
+    <a href="#">My collections</a> ->
+    <a href="#">Math</a> -> 
+    <a href="#">Math Mammoth</a> -> 
+    <a href="#">Editing</a>
+
+  </div>
+  <div class="clear"></div>
+
+
+  <div class="bigone">
+
+    <div class="halfone">
+      <h2>Math Mammoth</h2>
+
+      asdasd dsfsd dsg ds gdsg sddasd dsfsd dsg ds gdsg sddasd dsfsd dsg ds gdsg sddasd dsfsd dsg ds gdsg sddasd dsfsd dsg ds gdsg sddasd dsfsd dsg ds gdsg sd
+      <div class="formelementwrapper">
+        <div class="formelement formleft">
+          <strong>Description:</strong>
+        </div>
+        <div class="formelement">
+          <textarea></textarea>
+        </div>  
+      </div>
+
+
+      <div class="formelementwrapper">
+        <div class="formelement formleft">
+          <strong>Subject:</strong>
+        </div>
+        <div class="formelement">
+          <select name="subject">
+            <option>Subject 1</option>
+            <option>Subject 2</option>
+            <option>Subject 3</option>
+            <option>Subject 4</option>
+          </select>
+        </div>
+      </div>   
+
+
+      <div class="formelementwrapper">
+        <div class="formelement formleft">
+          <strong>Topic:</strong>
+        </div>
+        <div class="formelement">
+          <input type="text" value="" />
+        </div>
+      </div>
+
+      <!-- testime -->
+      <div style="overflow:hidden;width:500px;">
+        <div style="float:left;width:100px;">
+          <strong>Age group</strong>
+        </div>
+        <div style="float:left;">
+          <!-- slider starts -->
+          <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">           
+          <div id="slider-range-min"></div>
+
+        </div>
+      </div>
+
+
+      <div class="formelementwrapper">
+        <div class="formelement formleft">
+          <strong>Licence:</strong>
+        </div>
+        <div class="formelement">
+          <select name="subject">
+            <option>All rights reserved</option>
+            <option>Licence 2</option>
+            <option>Licence 3</option>
+            <option>Licence 4</option>
+          </select>
+        </div>
+      </div>  
+
+
+      <div class="formelementwrapper">
+        <div class="formelement formleft">
+          <strong>Tags:</strong>
+        </div>
+        <div class="formelement">
+<input type="text" class="form-control" id="tokenfield" value="red,green,blue" />
+        </div>
+      </div>   
+
+
+    </div>
+    <div class="halfone">
+      
+    <h3>Structure</h3>
+
+
+    </div>
+    <div class="clear"></div>   
+
+  </div>
+  <div class="clear"></div>
+
+
+</body>
+</html>
